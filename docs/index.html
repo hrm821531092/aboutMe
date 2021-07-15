@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>你不要过来啊~~~~</title>
+<title>你过来啊~~~~</title>
 <link rel="stylesheet" href="src/css/index.css">
 </head>
 <body>
@@ -57,7 +57,7 @@ span h1{
 var timeOutEvent=0;//定时器   
 //开始按   
 function gtouchstart(){   
-    timeOutEvent = setTimeout("longPress()",2000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   
+    timeOutEvent = setTimeout("longPress()",5000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   
     return false;   
 };   
 //手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   
