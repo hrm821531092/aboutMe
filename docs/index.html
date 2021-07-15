@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>萍水相逢，尽是他乡之客</title>
+<title>你不要过来啊~~~~</title>
 <link rel="stylesheet" href="src/css/index.css">
 </head>
 <body>
@@ -26,10 +26,19 @@ span h1{
     font-size:40px;
 }
 </style>
-<div class="doraemon">
+<img alt="ameng" src="src/photo/b.jpg" width="100%" height="100%" usemap="#ameng">
+<map name="ameng" id="ameng">
+<area alt="拍手手" shape="circle" coords="867,848,110" onclick="hand()">
+<area alt="哈哈哈痒~" shape="circle" coords="487,1234,200" onclick="duzi()">
+<area alt="啊！打死你！" shape="circle" coords="507,1371,20" onclick="qusi()">
+<area alt="挠脚脚" shape="rect" coords="266,1403,744,1494" onclick="jiaojiao()">
+<area alt="拍手手" shape="circle" coords="179,1218,110" onclick="hand()">
+<area alt="刮鼻子" shape="circle" coords="504,461,80"  ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend()">
+</map>
+<!--<div class="doraemon">
 	<div class = "doraemon_text">
 <h1 style="display:inline">你来点我鼻子呀~~~</h1>
-<a id="sendEmail" href = "JavaScript:void(0)" onclick=openForm()>发个邮件？</a>
+<a id="sendEmail" href = "JavaScript:void(0)" onclick=openForm()>发个邮件？</a> 
 </div>
 <button id="bizi" onclick="window.location.href='src/index.html'")></button>
 </div>
@@ -40,8 +49,50 @@ span h1{
 <input type="button" value="忍心关闭~~~" style="display:inline;width:40%" onclick=closeForm()>
 </form>
 </div>
-<script>
 
+</div>
+</div>-->
+<script>
+var timeOutEvent=0;//定时器   
+//开始按   
+function gtouchstart(){   
+    timeOutEvent = setTimeout("longPress()",2000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   
+    return false;   
+};   
+//手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   
+function gtouchend(){   
+    clearTimeout(timeOutEvent);//清除定时器   
+    if(timeOutEvent!=0){   
+        //这里写要执行的内容（尤如onclick事件）   
+        alert("刮鼻子");   
+    }   
+    return false;   
+};   
+//如果手指有移动，则取消所有事件，此时说明用户只是要移动而不是长按   
+function gtouchmove(){   
+    clearTimeout(timeOutEvent);//清除定时器   
+    timeOutEvent = 0;   
+      
+};   
+   
+//真正长按后应该执行的内容   
+function longPress(){   
+    timeOutEvent = 0;   
+    //执行长按要执行的内容，如弹出菜单   
+    window.location.href="src/index.html";  
+}   
+function hand(){
+alert("拍手手");
+}
+function duzi(){
+alert("哈哈哈痒~");
+}
+function qusi(){
+alert("啊！打死你！");
+}
+function jiaojiao(){
+alert("挠脚脚");
+}
 function openForm(){
  document.getElementById("startForm").style.display="inline";
  document.getElementById("sendEmail").style.display="none";
