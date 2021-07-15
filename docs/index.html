@@ -30,7 +30,7 @@ span h1{
 <map name="ameng" id="ameng">
 <area alt="拍手手" shape="circle" coords="867,848,110" onclick="hand()">
 <area alt="hesuan" shape="circle" coords="497,757,100" onclick="hesuan()">
-<area alt="哈哈哈痒~" shape="circle" coords="487,1234,200" onclick="duzi()">
+<area alt="拍肚子" shape="circle" coords="487,1234,200" onclick="duzi()">
 <area alt="啊！打死你！" shape="circle" coords="507,1371,20" onclick="qusi()">
 <area alt="挠脚脚" shape="rect" coords="230,1350,744,1600" onclick="jiaojiao()">
 <area alt="拍手手" shape="circle" coords="179,1218,110" onclick="hand()">
@@ -57,7 +57,7 @@ span h1{
 var timeOutEvent=0;//定时器   
 //开始按   
 function gtouchstart(){   
-    timeOutEvent = setTimeout("longPress()",5000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   
+    timeOutEvent = setTimeout("longPress()",3000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   
     return false;   
 };   
 //手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   
@@ -86,7 +86,7 @@ function hand(){
 alert("拍手手");
 }
 function duzi(){
-alert("哈哈哈痒~");
+alert("拍肚子");
 }
 function qusi(){
 alert("啊！打死你！");
