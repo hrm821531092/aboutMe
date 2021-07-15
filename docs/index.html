@@ -29,7 +29,8 @@ span h1{
 <img alt="ameng" src="src/photo/b.jpg" width="100%" height="100%" usemap="#ameng">
 <map name="ameng" id="ameng">
 <area alt="拍手手" shape="circle" coords="867,848,110" onclick="hand()">
-<area alt="哈哈哈痒~" shape="circle" coords="487,1234,200" onclick="duzi()">
+<area alt="hesuan" shape="circle" coords="497,757,100" onclick="hesuan()">
+<area alt="哈哈哈痒~" shape="circle" coords="487,1234,200" ontouchmove="duzi()">
 <area alt="啊！打死你！" shape="circle" coords="507,1371,20" onclick="qusi()">
 <area alt="挠脚脚" shape="rect" coords="266,1403,744,1494" onclick="jiaojiao()">
 <area alt="拍手手" shape="circle" coords="179,1218,110" onclick="hand()">
@@ -72,7 +73,7 @@ function gtouchend(){
 function gtouchmove(){   
     clearTimeout(timeOutEvent);//清除定时器   
     timeOutEvent = 0;   
-      
+   
 };   
    
 //真正长按后应该执行的内容   
@@ -93,6 +94,12 @@ alert("啊！打死你！");
 function jiaojiao(){
 alert("挠脚脚");
 }
+function hesuan(){
+alert("核酸检测！！");
+}
+
+
+
 function openForm(){
  document.getElementById("startForm").style.display="inline";
  document.getElementById("sendEmail").style.display="none";
